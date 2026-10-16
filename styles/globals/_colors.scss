@@ -3,3 +3,14 @@ $marfim: #f4ebdd;
 $terracota: #c46a48;
 $ouro: #d2aa59;
 $verde: #263f45;
+
+.texture-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/img/effect.png");
+}

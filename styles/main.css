@@ -77,6 +77,17 @@ textarea {
     transition-duration: 0.01ms !important;
   }
 }
+.texture-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/img/effect.png");
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
