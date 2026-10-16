@@ -1,5 +1,14 @@
 // GLOBAIS
 @use "globals/reset";
-@use "globals/globals";
 @use "globals/colors";
 @use "globals/fonts";
+@use "globals/globals";
+
+// SEÇÕES
+@use "sections/about";
+@use "sections/commissions";
+@use "sections/contact";
+@use "sections/gallery";
+@use "sections/header";
+@use "sections/hero";
+@use "sections/process";

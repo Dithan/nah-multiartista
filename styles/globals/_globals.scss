@@ -1,7 +1,8 @@
+@use "colors";
+
 // ========================================
 // Document
 // ========================================
-
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
@@ -11,6 +12,7 @@ body {
   min-width: 320px;
   font-family: sans-serif;
   line-height: 1.5;
+  background: colors.$marfim;
 }
 
 // ========================================
