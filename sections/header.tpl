@@ -1,9 +1,9 @@
-<header>
-  <a href="#inicio" aria-label="Náh Multiartista, página inicial">
+<header class="container">
+  <a class="logo" href="#inicio" aria-label="Náh Multiartista, página inicial">
     Náh Multiartista
   </a>
 
-  <nav aria-label="Navegação principal">
+  <nav aria-label="Navegação principal" class="nav-header">
     <ul>
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#galeria">Galeria</a></li>

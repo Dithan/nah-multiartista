@@ -108,8 +108,117 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
+.container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 425px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
+}
+[data-aos] {
+  opacity: 0;
+}
+
+.fade-up {
+  animation: fade-up 0.5s ease-out both;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fade-down {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-down {
+  animation: fade-down 0.5s ease-out both;
+}
+
+@keyframes fade-left {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.fade-left {
+  animation: fade-left 0.5s ease-out both;
+}
+
+@keyframes fade-right {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.fade-right {
+  animation: fade-right 0.5s ease-out both;
+}
+
+@keyframes zoom-in {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.zoom-in {
+  animation: zoom-in 0.5s ease-out both;
+  transform-origin: center center;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 40px;
+}
+header .logo {
+  font-size: 32px;
+}
+
+.nav-header ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }/*# sourceMappingURL=main.css.map */
