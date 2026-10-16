@@ -1,0 +1,51 @@
+// ========================================
+// Document
+// ========================================
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  min-width: 320px;
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+// ========================================
+// Typography
+// ========================================
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+// ========================================
+// Interactive elements
+// ========================================
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+// ========================================
+// Accessibility
+// ========================================
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
