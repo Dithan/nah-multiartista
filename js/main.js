@@ -8,13 +8,13 @@ async function carregarSecao(id, arquivo) {
 
 async function initPage() {
   await Promise.all([
-    carregarSecao("header", "header.html"),
-    carregarSecao("hero", "hero.html"),
-    carregarSecao("about", "about.html"),
-    carregarSecao("gallery", "gallery.html"),
-    carregarSecao("process", "process.html"),
-    carregarSecao("commissions", "commissions.html"),
-    carregarSecao("contact", "contact.html"),
+    carregarSecao("header", "header.tpl"),
+    carregarSecao("hero", "hero.tpl"),
+    carregarSecao("about", "about.tpl"),
+    carregarSecao("gallery", "gallery.tpl"),
+    carregarSecao("process", "process.tpl"),
+    carregarSecao("commissions", "commissions.tpl"),
+    carregarSecao("contact", "contact.tpl"),
   ]);
 }
 
