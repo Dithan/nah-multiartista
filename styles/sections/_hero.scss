@@ -1,0 +1,73 @@
+@use "../globals" as *;
+
+.hero {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+}
+
+.hero-subtitulo {
+  font-family: $cormorant;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.hero-titulo {
+  font-size: 48px;
+  line-height: 100%;
+}
+
+.hero-texto {
+  margin-top: 20px;
+}
+
+.btn-container {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-img {
+  display: block;
+  width: 100%;
+  max-width: 660px;
+  height: auto;
+
+  animation:
+    hero-entrance 1.2s ease-out both,
+    hero-float 6s ease-in-out 1.2s infinite;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+@keyframes hero-entrance {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes hero-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}

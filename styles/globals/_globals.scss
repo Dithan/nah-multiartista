@@ -13,6 +13,7 @@ body {
   font-family: sans-serif;
   line-height: 1.5;
   background: colors.$marfim;
+  padding-top: 80px;
 }
 
 // ========================================
@@ -79,8 +80,49 @@ $largura_smartphone: 425px;
   }
 }
 
+section {
+  padding: 60px 20px;
+}
+
 .container {
   @include container;
+}
+
+// Barra de rolagem
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: colors.$marfim;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: colors.$verde;
+  border-radius: 5px;
+  border: 2px solid colors.$marfim;
+}
+
+/* barra de rolagem hover */
+::-webkit-scrollbar-thumb:hover {
+  background: colors.$verde;
+}
+
+// Seleção de Texto
+/* Seleção para navegadores modernos */
+::selection {
+  background-color: colors.$verde; /* Cor de fundo da seleção */
+  color: colors.$marfim; /* Cor do texto da seleção */
+}
+
+/* Seleção para navegadores mais antigos */
+::-moz-selection {
+  background-color: colors.$verde; /* Cor de fundo da seleção para Firefox */
+  color: colors.$marfim; /* Cor do texto da seleção para Firefox */
 }
 
 // ========================================

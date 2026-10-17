@@ -1,9 +1,7 @@
 // GLOBAIS
 @use "globals/reset";
-@use "globals/colors";
-@use "globals/fonts";
-@use "globals/globals";
-@use "globals/animations";
+@use "globals/buttons";
+@use "globals" as *;
 
 // SEÇÕES
 @use "sections/about";
