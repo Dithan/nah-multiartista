@@ -20,7 +20,7 @@
 
     <div class="hero-grid-right">
       <picture class="hero-img">
-        <img src="../assets/img/hero.png" alt="grid de artes" />
+        <img src="./assets/img/hero.png" alt="grid de artes" />
       </picture>
     </div>
   </div>
