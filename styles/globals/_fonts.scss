@@ -1,0 +1,17 @@
+$cormorant: "Cormorant Garamond", serif;
+$lato: "Lato", sans-serif;
+
+h1,
+h2,
+h3,
+h4,
+.titulo {
+  font-family: $cormorant;
+  font-style: normal;
+}
+
+p,
+.texto {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+}
