@@ -1,3 +1,5 @@
+@use "colors";
+
 $cormorant: "Cormorant Garamond", serif;
 $lato: "Lato", sans-serif;
 
@@ -8,6 +10,7 @@ h4,
 .titulo {
   font-family: $cormorant;
   font-style: normal;
+  color: colors.$bordo;
 }
 
 p,

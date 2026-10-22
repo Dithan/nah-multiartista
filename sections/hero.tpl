@@ -7,6 +7,12 @@
         O invisível encontra caminhos para se manifestar no visível.
       </h1>
 
+      <div class="hero-grid-right show-mobile">
+        <picture class="hero-img">
+          <img src="./assets/img/hero.png" alt="grid de artes" />
+        </picture>
+      </div>
+
       <p class="texto hero-texto">
         Pintura, ilustração, escrita e música em um universo de conexão,
         expressão e criação.
@@ -18,7 +24,7 @@
       </div>
     </div>
 
-    <div class="hero-grid-right">
+    <div class="hero-grid-right hide-mobile">
       <picture class="hero-img">
         <img src="./assets/img/hero.png" alt="grid de artes" />
       </picture>

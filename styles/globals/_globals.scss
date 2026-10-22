@@ -1,4 +1,5 @@
 @use "colors";
+@use "media-query" as *;
 
 // ========================================
 // Document
@@ -43,27 +44,6 @@ button {
   -webkit-tap-highlight-color: transparent;
 }
 
-// Media Query
-$largura_desktop: 1440px;
-$largura_tablet: 768px;
-$largura_smartphone: 425px;
-
-@mixin mq($largura) {
-  @if $largura == l {
-    @media screen and (min-width: #{$largura_desktop}) {
-      @content;
-    }
-  } @else if $largura == m {
-    @media screen and (min-width: #{$largura_tablet}) and (max-width: #{$largura_desktop - 1}) {
-      @content;
-    }
-  } @else if $largura == s {
-    @media screen and (max-width: #{$largura_tablet - 1}) {
-      @content;
-    }
-  }
-}
-
 @mixin container {
   max-width: $largura_desktop;
   margin-left: auto;
@@ -82,6 +62,10 @@ $largura_smartphone: 425px;
 
 section {
   padding: 60px 20px;
+
+  @include mq(s) {
+    padding: 40px 10px;
+  }
 }
 
 .container {
