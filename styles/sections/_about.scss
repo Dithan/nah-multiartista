@@ -1,0 +1,46 @@
+@use "../globals" as *;
+
+.sobre {
+  background: rgba($bordo, 0.95);
+  color: $marfim;
+  padding-top: 0;
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+
+    @include mq(s) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  .sobre-grid-left {
+    padding: 0 60px 60px 60px;
+
+    @include mq(s) {
+      padding: 0 0px 0;
+    }
+
+    picture {
+      display: block;
+      border-radius: 0 0 300px 300px;
+      overflow: hidden;
+
+      img {
+      }
+    }
+  }
+
+  .marca {
+    font-family: $cormorant;
+    color: #fff;
+    font-weight: 800;
+    font-size: 22px;
+  }
+}

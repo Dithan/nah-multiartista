@@ -1,11 +1,18 @@
 @use "../globals" as *;
 
 .hero {
+  overflow: hidden;
+
+  @include mq(l) {
+    height: calc(100vh - 68px);
+  }
+
   .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
+    justify-content: center;
 
     @include mq(s) {
       display: flex;
@@ -17,112 +24,202 @@
   }
 }
 
-.hero-subtitulo {
-  font-family: $cormorant;
-  font-size: 24px;
-  font-weight: 700;
-  color: verde;
+.hero-grid-left {
+  position: relative;
 
-  @include mq(m) {
-    font-size: 22px;
+  .detail-hero {
+    position: absolute;
+    top: -140px;
+    left: -80px;
+    font-size: 300px;
+    font-weight: 600;
+    font-family: $cormorant;
+    line-height: 0.7;
+    color: $verde;
+    opacity: 0.035;
+    z-index: -1;
+
+    @include mq(m) {
+      font-size: 180px;
+      top: -60px;
+      left: -30px;
+    }
+
+    @include mq(s) {
+      font-size: 160px;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
-  @include mq(s) {
-    font-size: 20px;
-    text-align: center;
+  .hero-subtitulo {
+    font-family: $cormorant;
+    font-size: 24px;
+    font-weight: 700;
+    color: verde;
+
+    @include mq(m) {
+      font-size: 22px;
+    }
+
+    @include mq(s) {
+      font-size: 20px;
+      text-align: center;
+    }
   }
-}
 
-.hero-titulo {
-  font-size: 48px;
-  line-height: 100%;
+  .hero-titulo {
+    font-size: 48px;
+    line-height: 100%;
 
-  @include mq(m) {
-    font-size: 36px;
-  }
+    @include mq(m) {
+      font-size: 36px;
+    }
 
-  @include mq(s) {
-    font-size: 36px;
-    text-align: center;
-    width: 100%;
-  }
-}
-
-.hero-texto {
-  margin-top: 20px;
-
-  @include mq(s) {
-    text-align: center;
-    margin-top: 0;
-  }
-}
-
-.btn-container {
-  margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 20px;
-
-  @include mq(m) {
-    gap: 10px;
-
-    .btn {
-      display: block;
+    @include mq(s) {
+      font-size: 36px;
+      text-align: center;
       width: 100%;
     }
   }
 
-  @include mq(s) {
-    gap: 10px;
+  .hero-texto {
+    margin-top: 20px;
 
-    .btn {
-      display: block;
-      width: 100%;
+    @include mq(s) {
+      text-align: center;
+      margin-top: 0;
+    }
+  }
+
+  .btn-container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+
+    @include mq(m) {
+      gap: 10px;
+
+      .btn {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    @include mq(s) {
+      gap: 10px;
+
+      .btn {
+        display: block;
+        width: 100%;
+      }
     }
   }
 }
 
-.hero-img {
-  display: block;
-  width: 100%;
-  max-width: 660px;
-  height: auto;
-  animation:
-    hero-entrance 1.2s ease-out both,
-    hero-float 6s ease-in-out 1.2s infinite;
-
-  @include mq(s) {
-    padding: 30px;
-  }
-
-  img {
+.hero-grid-right {
+  .hero-img {
+    position: relative;
     display: block;
     width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-}
+    max-width: 660px;
+    height: auto;
+    animation:
+      hero-entrance 1.2s ease-out both,
+      hero-float 6s ease-in-out 1.2s infinite;
+    margin-top: 20px;
 
-@keyframes hero-entrance {
-  from {
-    opacity: 0;
-    transform: translateY(20px) scale(0.98);
+    @include mq(s) {
+      padding: 30px;
+    }
+
+    &::before {
+      position: absolute;
+      top: -40px;
+      right: -80px;
+      content: "";
+      display: block;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: $verde;
+      opacity: 0.4;
+      z-index: -1;
+
+      @include mq(m) {
+        width: 120px;
+        height: 120px;
+        top: -20px;
+        right: -40px;
+      }
+
+      @include mq(s) {
+        width: 100px;
+        height: 100px;
+        top: 10px;
+        right: 0px;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      top: -60px;
+      right: -80px;
+      content: "";
+      display: block;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: $verde;
+      opacity: 0.4;
+      z-index: -1;
+
+      @include mq(m) {
+        width: 50px;
+        height: 50px;
+        top: -30px;
+        right: -40px;
+      }
+
+      @include mq(s) {
+        width: 40px;
+        height: 40px;
+        top: 0px;
+        right: 0px;
+      }
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
   }
 
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
+  @keyframes hero-entrance {
+    from {
+      opacity: 0;
+      transform: translateY(20px) scale(0.98);
+    }
 
-@keyframes hero-float {
-  0%,
-  100% {
-    transform: translateY(0);
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
   }
 
-  50% {
-    transform: translateY(-8px);
+  @keyframes hero-float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-8px);
+    }
   }
 }

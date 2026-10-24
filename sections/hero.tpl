@@ -1,12 +1,14 @@
 <section id="inicio" aria-labelledby="hero-titulo" class="hero">
   <div class="container">
     <div class="hero-grid-left">
+      <span class="detail-hero">Náh.</span>
       <p class="hero-subtitulo">Náh Multiartista</p>
 
       <h1 class="hero-titulo">
         O invisível encontra caminhos para se manifestar no visível.
       </h1>
 
+      <!-- Image mobile -->
       <div class="hero-grid-right show-mobile">
         <picture class="hero-img">
           <img src="./assets/img/hero.png" alt="grid de artes" />
@@ -24,6 +26,7 @@
       </div>
     </div>
 
+    <!-- Image -->
     <div class="hero-grid-right hide-mobile">
       <picture class="hero-img">
         <img src="./assets/img/hero.png" alt="grid de artes" />

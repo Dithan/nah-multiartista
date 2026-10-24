@@ -50,6 +50,14 @@ video {
   height: auto;
 }
 
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 button,
 input,
 textarea,
@@ -114,10 +122,36 @@ h4,
   color: #702c3b;
 }
 
-p,
+.titulo {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 767px) {
+  .titulo {
+    font-size: 38px;
+  }
+}
+.titulo.verde {
+  color: #d2aa59 !important;
+}
+
 .texto {
   font-family: "Lato", sans-serif;
   font-style: normal;
+}
+@media screen and (min-width: 1440px) {
+  .texto {
+    text-align: justify;
+  }
+}
+.texto p {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 767px) {
+  .texto p {
+    font-size: 16px;
+  }
 }
 
 html {
@@ -353,6 +387,46 @@ section {
     transform: none;
   }
 }
+.sobre {
+  background: rgba(112, 44, 59, 0.95);
+  color: #f4ebdd;
+  padding-top: 0;
+}
+.sobre .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .sobre .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+}
+.sobre .sobre-grid-left {
+  padding: 0 60px 60px 60px;
+}
+@media screen and (max-width: 767px) {
+  .sobre .sobre-grid-left {
+    padding: 0 0px 0;
+  }
+}
+.sobre .sobre-grid-left picture {
+  display: block;
+  border-radius: 0 0 300px 300px;
+  overflow: hidden;
+}
+.sobre .marca {
+  font-family: "Cormorant Garamond", serif;
+  color: #fff;
+  font-weight: 800;
+  font-size: 22px;
+}
+
 header {
   display: block;
   width: 100%;
@@ -590,11 +664,20 @@ header .logo {
     transition: none;
   }
 }
+.hero {
+  overflow: hidden;
+}
+@media screen and (min-width: 1440px) {
+  .hero {
+    height: calc(100vh - 68px);
+  }
+}
 .hero .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
+  justify-content: center;
 }
 @media screen and (max-width: 767px) {
   .hero .container {
@@ -606,52 +689,79 @@ header .logo {
   }
 }
 
-.hero-subtitulo {
+.hero-grid-left {
+  position: relative;
+}
+.hero-grid-left .detail-hero {
+  position: absolute;
+  top: -140px;
+  left: -80px;
+  font-size: 300px;
+  font-weight: 600;
+  font-family: "Cormorant Garamond", serif;
+  line-height: 0.7;
+  color: #263f45;
+  opacity: 0.035;
+  z-index: -1;
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .hero-grid-left .detail-hero {
+    font-size: 180px;
+    top: -60px;
+    left: -30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .hero-grid-left .detail-hero {
+    font-size: 160px;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.hero-grid-left .hero-subtitulo {
   font-family: "Cormorant Garamond", serif;
   font-size: 24px;
   font-weight: 700;
   color: verde;
 }
 @media screen and (min-width: 768px) and (max-width: 1439px) {
-  .hero-subtitulo {
+  .hero-grid-left .hero-subtitulo {
     font-size: 22px;
   }
 }
 @media screen and (max-width: 767px) {
-  .hero-subtitulo {
+  .hero-grid-left .hero-subtitulo {
     font-size: 20px;
     text-align: center;
   }
 }
-
-.hero-titulo {
+.hero-grid-left .hero-titulo {
   font-size: 48px;
   line-height: 100%;
 }
 @media screen and (min-width: 768px) and (max-width: 1439px) {
-  .hero-titulo {
+  .hero-grid-left .hero-titulo {
     font-size: 36px;
   }
 }
 @media screen and (max-width: 767px) {
-  .hero-titulo {
+  .hero-grid-left .hero-titulo {
     font-size: 36px;
     text-align: center;
     width: 100%;
   }
 }
-
-.hero-texto {
+.hero-grid-left .hero-texto {
   margin-top: 20px;
 }
 @media screen and (max-width: 767px) {
-  .hero-texto {
+  .hero-grid-left .hero-texto {
     text-align: center;
     margin-top: 0;
   }
 }
-
-.btn-container {
+.hero-grid-left .btn-container {
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -659,44 +769,103 @@ header .logo {
   gap: 20px;
 }
 @media screen and (min-width: 768px) and (max-width: 1439px) {
-  .btn-container {
+  .hero-grid-left .btn-container {
     gap: 10px;
   }
-  .btn-container .btn {
+  .hero-grid-left .btn-container .btn {
     display: block;
     width: 100%;
   }
 }
 @media screen and (max-width: 767px) {
-  .btn-container {
+  .hero-grid-left .btn-container {
     gap: 10px;
   }
-  .btn-container .btn {
+  .hero-grid-left .btn-container .btn {
     display: block;
     width: 100%;
   }
 }
 
-.hero-img {
+.hero-grid-right .hero-img {
+  position: relative;
   display: block;
   width: 100%;
   max-width: 660px;
   height: auto;
   animation: hero-entrance 1.2s ease-out both, hero-float 6s ease-in-out 1.2s infinite;
+  margin-top: 20px;
 }
 @media screen and (max-width: 767px) {
-  .hero-img {
+  .hero-grid-right .hero-img {
     padding: 30px;
   }
 }
-.hero-img img {
+.hero-grid-right .hero-img::before {
+  position: absolute;
+  top: -40px;
+  right: -80px;
+  content: "";
+  display: block;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: #263f45;
+  opacity: 0.4;
+  z-index: -1;
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .hero-grid-right .hero-img::before {
+    width: 120px;
+    height: 120px;
+    top: -20px;
+    right: -40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .hero-grid-right .hero-img::before {
+    width: 100px;
+    height: 100px;
+    top: 10px;
+    right: 0px;
+  }
+}
+.hero-grid-right .hero-img::after {
+  position: absolute;
+  top: -60px;
+  right: -80px;
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #263f45;
+  opacity: 0.4;
+  z-index: -1;
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .hero-grid-right .hero-img::after {
+    width: 50px;
+    height: 50px;
+    top: -30px;
+    right: -40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .hero-grid-right .hero-img::after {
+    width: 40px;
+    height: 40px;
+    top: 0px;
+    right: 0px;
+  }
+}
+.hero-grid-right .hero-img img {
   display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-
 @keyframes hero-entrance {
   from {
     opacity: 0;
