@@ -21,6 +21,34 @@ header {
     position: relative;
     z-index: 101;
   }
+
+  .logo,
+  .nav-header ul li a {
+    transition: color 0.3s ease;
+  }
+
+  &.is-dark {
+    .logo,
+    .nav-header ul li a {
+      color: $marfim;
+    }
+
+    .nav-header ul li:hover a {
+      color: $ouro;
+    }
+
+    .menu-toggle {
+      border-color: rgba($ouro, 0.7);
+
+      &__line {
+        background-color: $marfim;
+      }
+
+      &:hover {
+        background-color: rgba($ouro, 0.15);
+      }
+    }
+  }
 }
 
 .nav-header {
@@ -165,7 +193,7 @@ header {
   height: 48px;
   padding: 12px;
 
-  background: rgba($marfim, 0.8);
+  //background: rgba($marfim, 0.8);
   border: 1px solid rgba($ouro, 0.7);
   border-radius: 50%;
 

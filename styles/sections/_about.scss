@@ -3,25 +3,57 @@
 .sobre {
   background: rgba($bordo, 0.95);
   color: $marfim;
-  padding-top: 0;
+  position: relative;
+
+  @include mq(l) {
+    padding-top: 180px;
+    padding-bottom: 180px;
+  }
+
+  @include mq(m) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  @include mq(s) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 
   .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 80px;
     align-items: center;
     justify-content: center;
 
+    @include mq(m) {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
     @include mq(s) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      width: 100%;
+      grid-template-columns: 1fr;
+      gap: 30px;
     }
   }
 
   .sobre-grid-left {
-    padding: 0 60px 60px 60px;
+    .texto {
+      text-align: right;
+
+      @include mq(m) {
+        text-align: justify;
+      }
+
+      @include mq(s) {
+        text-align: left;
+      }
+    }
+  }
+
+  .sobre-grid-center {
+    position: relative;
 
     @include mq(s) {
       padding: 0 0px 0;
@@ -29,11 +61,20 @@
 
     picture {
       display: block;
-      border-radius: 0 0 300px 300px;
       overflow: hidden;
+      box-shadow: 11px 9px 9px 4px #0000001f;
+      transition: 0.3s ease-out;
 
-      img {
+      &:hover {
+        transform: scale(0.97) rotate(2deg);
+        box-shadow: 9px 7px 7px 2px #00000021;
       }
+    }
+  }
+
+  .sobre-grid-right {
+    .texto {
+      text-align: left;
     }
   }
 

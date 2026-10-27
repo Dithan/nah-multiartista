@@ -15,11 +15,11 @@ h4,
 }
 
 .titulo {
-  font-size: 42px;
+  font-size: 38px;
   margin-bottom: 20px;
 
   @include mq(s) {
-    font-size: 38px;
+    font-size: 32px;
   }
 
   &.verde {
@@ -36,7 +36,7 @@ h4,
   }
 
   p {
-    font-size: 17px;
+    font-size: 16px;
     margin-bottom: 10px;
 
     @include mq(s) {

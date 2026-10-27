@@ -2,9 +2,10 @@
 
 .hero {
   overflow: hidden;
+  padding-top: 140px;
 
   @include mq(l) {
-    height: calc(100vh - 68px);
+    height: 100vh;
   }
 
   .container {
@@ -22,6 +23,10 @@
       width: 100%;
     }
   }
+
+  .texture-hero {
+    opacity: 0.4;
+  }
 }
 
 .hero-grid-left {
@@ -38,6 +43,8 @@
     color: $verde;
     opacity: 0.035;
     z-index: -1;
+    pointer-events: none;
+    user-select: none;
 
     @include mq(m) {
       font-size: 180px;
@@ -136,17 +143,14 @@
       padding: 30px;
     }
 
-    &::before {
+    .circulo {
       position: absolute;
       top: -40px;
       right: -80px;
-      content: "";
       display: block;
       width: 260px;
       height: 260px;
-      border-radius: 50%;
-      background: $verde;
-      opacity: 0.4;
+      opacity: 1;
       z-index: -1;
 
       @include mq(m) {
@@ -164,17 +168,14 @@
       }
     }
 
-    &::after {
+    .circulo-s {
       position: absolute;
       top: -60px;
       right: -80px;
-      content: "";
       display: block;
       width: 100px;
       height: 100px;
-      border-radius: 50%;
-      background: $verde;
-      opacity: 0.4;
+      opacity: 0.98;
       z-index: -1;
 
       @include mq(m) {
