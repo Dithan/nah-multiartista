@@ -1,5 +1,5 @@
 <section id="sobre" class="sobre" aria-labelledby="sobre-titulo" data-header-theme="dark">
-  <span class="line"><img src="../assets/img/linha.svg" /></span>
+  <span class="line"><img src="./assets/img/linha.svg" /></span>
   <span class="texture-effect"></span>
 
   <div class="container">

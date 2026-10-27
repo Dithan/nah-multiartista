@@ -1,5 +1,5 @@
 <section id="galeria" aria-labelledby="galeria-titulo">
-  <span class="line"><img src="../assets/img/linha.svg" /></span>
+  <span class="line"><img src="./assets/img/linha.svg" /></span>
   <div class="container">
     <h2 id="galeria-titulo">Meu universo artístico</h2>
 

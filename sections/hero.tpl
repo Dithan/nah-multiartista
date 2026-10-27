@@ -12,9 +12,9 @@
       <!-- Image mobile -->
       <div class="hero-grid-right show-mobile">
         <picture class="hero-img">
-          <span class="circulo"><img src="../assets/img/circulo.svg" /></span>
+          <span class="circulo"><img src="./assets/img/circulo.svg" /></span>
           <span class="circulo-s"
-            ><img src="../assets/img/circulo-ouro.svg"
+            ><img src="./assets/img/circulo-ouro.svg"
           /></span>
           <img src="./assets/img/hero.png" alt="grid de artes" />
         </picture>
@@ -34,9 +34,9 @@
     <!-- Image -->
     <div class="hero-grid-right hide-mobile">
       <picture class="hero-img">
-        <span class="circulo"><img src="../assets/img/circulo.svg" /></span>
+        <span class="circulo"><img src="./assets/img/circulo.svg" /></span>
         <span class="circulo-s"
-          ><img src="../assets/img/circulo-ouro.svg"
+          ><img src="./assets/img/circulo-ouro.svg"
         /></span>
         <img src="./assets/img/hero.png" alt="grid de artes" />
       </picture>
