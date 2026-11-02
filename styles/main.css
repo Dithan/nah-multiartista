@@ -199,7 +199,7 @@ section {
   bottom: 0;
   width: 100%;
   height: 100%;
-  background-image: url("./assets/img/effect.png");
+  background-image: url("../assets/img/effect.png");
   background-position: center center;
   background-repeat: repeat;
   background-attachment: fixed;
@@ -558,7 +558,7 @@ section {
 }
 
 .contato {
-  background-image: url("./assets/img/background-texture.jpg");
+  background-image: url("../assets/img/background-texture.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1157,7 +1157,7 @@ header.is-dark .menu-toggle:hover {
 }
 
 .processo {
-  background-image: url("./assets/img/background-img.jpg");
+  background-image: url("../assets/img/background-img.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
