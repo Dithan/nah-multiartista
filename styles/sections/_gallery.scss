@@ -1,0 +1,30 @@
+@use "../globals" as *;
+
+.galeria {
+  @include mq(l) {
+    padding: 120px 20px;
+  }
+
+  .grid-galeria {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .quadro {
+    max-width: 32%;
+    padding: 40px;
+    figure {
+      display: block;
+      overflow: hidden;
+      box-shadow: 11px 9px 9px 4px #0000001f;
+      transition: 0.3s ease-out;
+
+      &:hover {
+        transform: scale(0.97) rotate(2deg);
+        box-shadow: 9px 7px 7px 2px #00000021;
+      }
+    }
+  }
+}
