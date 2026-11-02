@@ -24,7 +24,7 @@
       <div class="quadro">
         <figure>
           <img
-            src="../assets/img/galeria/duo.jpeg"
+            src="./assets/img/galeria/duo.jpeg"
             alt="Quadros de pintura Duo"
           />
         </figure>
@@ -34,7 +34,7 @@
       <div class="quadro">
         <figure>
           <img
-            src="../assets/img/galeria/expressoes-do-brasil.jpeg"
+            src="./assets/img/galeria/expressoes-do-brasil.jpeg"
             alt="Quadros de pintura Expressoes do Brasil"
           />
         </figure>

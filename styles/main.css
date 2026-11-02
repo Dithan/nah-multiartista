@@ -502,13 +502,26 @@ section {
 }
 .galeria .grid-galeria {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap: 40px;
 }
 .galeria .quadro {
   max-width: 32%;
   padding: 40px;
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .galeria .quadro {
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .galeria .quadro {
+    padding: 20px;
+    max-width: 100%;
+  }
 }
 .galeria .quadro figure {
   display: block;

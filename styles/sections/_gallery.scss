@@ -7,14 +7,26 @@
 
   .grid-galeria {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     gap: 40px;
   }
 
   .quadro {
     max-width: 32%;
     padding: 40px;
+
+    @include mq(m) {
+      padding: 20px;
+    }
+
+    @include mq(s) {
+      padding: 20px;
+      max-width: 100%;
+    }
+
     figure {
       display: block;
       overflow: hidden;
