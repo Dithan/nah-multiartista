@@ -36,6 +36,16 @@
   &:active {
     transform: translateY(0);
   }
+
+  .icon-btn {
+    display: inline-block;
+
+    svg {
+      width: 20px;
+      margin-bottom: 2px;
+      color: $marfim;
+    }
+  }
 }
 
 .btn-primary {
@@ -72,6 +82,18 @@
   }
 }
 
+.btn-terciary {
+  color: $marfim;
+  background-color: $verde;
+  border-color: $verde;
+
+  &:hover {
+    background-color: $bordo;
+    border-color: $bordo;
+    box-shadow: 0 5px 15px rgba($verde, 0.18);
+  }
+}
+
 .btn-container {
   margin-top: 20px;
   display: flex;
@@ -83,7 +105,6 @@
     gap: 10px;
 
     .btn {
-      display: block;
       width: 100%;
     }
   }
@@ -92,7 +113,6 @@
     gap: 10px;
 
     .btn {
-      display: block;
       width: 100%;
     }
   }

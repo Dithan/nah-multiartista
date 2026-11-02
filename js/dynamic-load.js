@@ -21,7 +21,6 @@ async function initPage() {
     carregarSecao("about", "about.tpl"),
     carregarSecao("gallery", "gallery.tpl"),
     carregarSecao("process", "process.tpl"),
-    carregarSecao("commissions", "commissions.tpl"),
     carregarSecao("contact", "contact.tpl"),
     carregarSecao("footer", "footer.tpl"),
   ]);

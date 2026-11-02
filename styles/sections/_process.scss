@@ -1,7 +1,7 @@
 @use "../globals" as *;
 
 .processo {
-  background-image: url("../../assets/img/background-img.jpg");
+  background-image: url("./assets/img/background-img.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -10,6 +10,25 @@
 
   @include mq(s) {
     background-attachment: scroll;
+    background-position: 25% center;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    width: 2px;
+    height: 50px;
+    background: $bordo;
+    z-index: 1;
+  }
+
+  &::after {
+    top: auto;
+    bottom: -25px;
   }
 
   .mascara {
@@ -18,7 +37,11 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba($verde, 0.2);
+    background: rgba($verde, 0.3);
+
+    @include mq(s) {
+      backdrop-filter: blur(4px);
+    }
   }
 
   .container {

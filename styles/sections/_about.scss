@@ -4,7 +4,8 @@
   background: rgba($bordo, 0.95);
   color: $marfim;
   position: relative;
-  overflow-x: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
 
   @include mq(l) {
     padding-top: 180px;
