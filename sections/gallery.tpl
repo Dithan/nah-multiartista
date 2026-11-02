@@ -20,7 +20,7 @@
             alt="Quadros de pintura Ancestrais"
           />
         </figure>
-        <figcaption>Acestrais</figcaption>
+        <figcaption>Ancestrais</figcaption>
       </div>
 
       <div class="quadro">
@@ -40,7 +40,7 @@
             alt="Quadros de pintura Expressoes do Brasil"
           />
         </figure>
-        <figcaption>Expressoes do Brasil</figcaption>
+        <figcaption>Expressões do Brasil</figcaption>
       </div>
     </div>
 
