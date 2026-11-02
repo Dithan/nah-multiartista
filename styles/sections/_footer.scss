@@ -1,0 +1,35 @@
+@use "../globals" as *;
+
+#footer {
+  padding: 10px 10px;
+  background: $terracota;
+  color: $marfim;
+  font-family: $cormorant;
+  font-size: 22px;
+  text-align: center;
+
+  // mobile
+  @include mq(s) {
+    font-size: 20px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+
+    // mobile
+    @include mq(s) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .logo {
+    font-size: 32px;
+    font-family: $cormorant;
+    position: relative;
+    z-index: 101;
+    text-align: left;
+  }
+}

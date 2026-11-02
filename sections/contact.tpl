@@ -17,10 +17,3 @@
     </a>
   </div>
 </section>
-
-<footer>
-  <div class="container">
-    <p>Náh</p>
-    <p>Antes Arte do que nunca!</p>
-  </div>
-</footer>

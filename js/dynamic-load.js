@@ -23,6 +23,7 @@ async function initPage() {
     carregarSecao("process", "process.tpl"),
     carregarSecao("commissions", "commissions.tpl"),
     carregarSecao("contact", "contact.tpl"),
+    carregarSecao("footer", "footer.tpl"),
   ]);
 
   document.dispatchEvent(new Event("pageLoaded"));
