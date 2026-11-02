@@ -1,14 +1,16 @@
 <section id="galeria" class="galeria" aria-labelledby="galeria-titulo">
   <span class="line"><img src="./assets/img/linha.svg" /></span>
   <div class="container">
-    <h2 id="galeria-titulo">Meu universo artístico</h2>
+    <h2 id="galeria-titulo" class="titulo">Meu universo artístico</h2>
 
-    <p>
-      Cada obra carrega uma expressão, uma intenção e uma forma única de
-      traduzir aquilo que atravessa meu universo criativo.
-    </p>
+    <div class="texto">
+      <p>
+        Cada obra carrega uma expressão, uma intenção e uma forma única de
+        traduzir aquilo que atravessa meu universo criativo.
+      </p>
 
-    <p>Explore minhas pinturas, ilustrações e criações artísticas.</p>
+      <p>Explore minhas pinturas, ilustrações e criações artísticas.</p>
+    </div>
 
     <div class="grid-galeria">
       <div class="quadro">
@@ -42,6 +44,8 @@
       </div>
     </div>
 
-    <a href="#contato">Quero encomendar uma obra</a>
+    <div class="btn-container">
+      <a href="#contato" class="btn btn-primary">Quero encomendar uma obra!</a>
+    </div>
   </div>
 </section>

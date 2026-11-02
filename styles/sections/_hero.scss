@@ -99,32 +99,6 @@
       margin-top: 0;
     }
   }
-
-  .btn-container {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 20px;
-
-    @include mq(m) {
-      gap: 10px;
-
-      .btn {
-        display: block;
-        width: 100%;
-      }
-    }
-
-    @include mq(s) {
-      gap: 10px;
-
-      .btn {
-        display: block;
-        width: 100%;
-      }
-    }
-  }
 }
 
 .hero-grid-right {
