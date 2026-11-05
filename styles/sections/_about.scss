@@ -26,16 +26,20 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 80px;
-    align-items: center;
+    align-items: start;
     justify-content: center;
 
     @include mq(m) {
       grid-template-columns: 1fr;
+      align-items: center;
+
       gap: 30px;
     }
 
     @include mq(s) {
       grid-template-columns: 1fr;
+      align-items: center;
+
       gap: 30px;
     }
   }
@@ -58,7 +62,7 @@
     position: relative;
 
     @include mq(s) {
-      padding: 0 0px 0;
+      padding: 0 0 40px 0;
     }
 
     picture {

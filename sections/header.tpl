@@ -6,6 +6,7 @@
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#galeria">Galeria</a></li>
         <li><a href="#processo">Processo artístico</a></li>
+        <li><a href="#livro">Livro</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
@@ -31,6 +32,7 @@
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#galeria">Galeria</a></li>
           <li><a href="#processo">Processo artístico</a></li>
+          <li><a href="#livro">Livro</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
       </div>

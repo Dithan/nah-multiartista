@@ -1,0 +1,236 @@
+@use "../globals" as *;
+
+.book {
+  position: relative;
+  background-color: $marfim;
+  color: $verde;
+  overflow: clip;
+
+  &::after {
+    content: "";
+    display: block;
+    width: calc(100% - 40px);
+    height: 1px;
+    background: rgba($ouro, 0.1);
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+  }
+
+  .book-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: center;
+    gap: 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @include mq(m) {
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 6%;
+    }
+
+    @include mq(s) {
+      grid-template-columns: 1fr;
+      gap: 55px;
+    }
+  }
+
+  // IMAGEM DO LIVRO
+  .book-image {
+    position: relative;
+    width: 100%;
+    max-width: 390px;
+    margin: 0 auto;
+    padding: 18px;
+
+    @include mq(m) {
+      max-width: 320px;
+    }
+
+    @include mq(s) {
+      width: 85%;
+      max-width: 320px;
+    }
+  }
+
+  .book-image-frame {
+    position: relative;
+    padding: 12px;
+    border: 1px solid rgba($bordo, 0.45);
+    background-color: rgba($ouro, 0.12);
+    box-shadow: 15px 18px 0 rgba($bordo, 0.08);
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 5px;
+      border: 1px solid rgba($ouro, 0.65);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .book-image-decoration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    span {
+      display: block;
+      width: 8px;
+      height: 8px;
+      background-color: $terracota;
+      transform: rotate(45deg);
+
+      &:nth-child(2) {
+        width: 12px;
+        height: 12px;
+        background-color: $ouro;
+      }
+    }
+  }
+
+  .book-image-caption {
+    display: block;
+    margin-top: 32px;
+    font-family: $cormorant;
+    font-size: 18px;
+    font-style: italic;
+    color: $bordo;
+    text-align: center;
+
+    @include mq(s) {
+      margin-top: 25px;
+      font-size: 17px;
+    }
+  }
+
+  // CONTEÚDO
+  .book-content {
+    position: relative;
+    max-width: 650px;
+
+    @include mq(s) {
+      max-width: 100%;
+    }
+  }
+
+  .book-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    color: $terracota;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    @include mq(s) {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-align: center;
+      justify-content: center;
+    }
+
+    span {
+      display: block;
+      width: 32px;
+      height: 1px;
+      background-color: $terracota;
+    }
+  }
+
+  .titulo {
+    @include mq(s) {
+      text-align: center;
+    }
+  }
+
+  .book-subtitle {
+    margin-top: 24px;
+    color: $verde;
+    font-family: $cormorant;
+    font-size: 25px;
+    font-style: italic;
+
+    @include mq(s) {
+      margin-top: 18px;
+      font-size: 22px;
+      text-align: center;
+    }
+  }
+
+  .book-divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 180px;
+    margin: 30px 0;
+    color: $ouro;
+
+    @include mq(s) {
+      margin: 25px auto;
+      justify-content: center;
+    }
+
+    span:not(:nth-child(2)) {
+      flex: 1;
+      height: 1px;
+      background-color: rgba($ouro, 0.8);
+    }
+
+    span:nth-child(2) {
+      font-size: 15px;
+    }
+  }
+
+  .book-description {
+    display: grid;
+    gap: 18px;
+
+    @include mq(s) {
+      gap: 16px;
+    }
+
+    p {
+      @include mq(m) {
+        font-size: 14px;
+        text-align: left;
+      }
+
+      @include mq(s) {
+        font-size: 14px;
+        line-height: 1.85;
+        text-align: left;
+      }
+    }
+  }
+
+  .book-signature {
+    display: block;
+    margin-top: 28px;
+    color: $terracota;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 23px;
+    font-style: italic;
+
+    @include mq(s) {
+      font-size: 21px;
+    }
+  }
+}

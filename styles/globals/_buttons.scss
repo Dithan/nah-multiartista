@@ -72,13 +72,14 @@
   }
 
   &.white {
-    color: $marfim;
-    border-color: $marfim;
+    color: $ouro;
+    border-color: $ouro;
   }
 
   &:hover.white {
-    background-color: $verde;
-    border-color: $verde;
+    background-color: $ouro;
+    border-color: $ouro;
+    color: $marfim;
   }
 }
 

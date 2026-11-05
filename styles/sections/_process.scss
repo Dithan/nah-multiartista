@@ -1,63 +1,280 @@
 @use "../globals" as *;
 
 .processo {
-  background-image: url("../assets/img/background-img.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   position: relative;
-  color: #fff;
+  color: $marfim;
+
+  background:
+    linear-gradient(
+      110deg,
+      rgba($verde, 0.8) 0%,
+      rgba($verde, 0.7) 50%,
+      rgba($verde, 0.6) 100%
+    ),
+    url("../assets/img/background-img.jpg");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 
   @include mq(s) {
     background-attachment: scroll;
-    background-position: 25% center;
+    background-position: center;
+    background-image:
+      linear-gradient(rgba($verde, 0.9), rgba($verde, 0.94)),
+      url("../assets/img/background-img.jpg");
   }
 
+  // DETALHES DECORATIVOS
   &::before,
   &::after {
     content: "";
-    display: block;
     position: absolute;
-    top: -25px;
     left: 50%;
-    width: 2px;
+    width: 1px;
     height: 50px;
-    background: $bordo;
+    background-color: $ouro;
     z-index: 1;
+  }
+
+  &::before {
+    top: -25px;
   }
 
   &::after {
-    top: auto;
     bottom: -25px;
   }
 
-  .mascara {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba($verde, 0.3);
+  // CABEÇALHO
+  .processo-header {
+    max-width: 720px;
+    margin: 0 auto 65px;
+    text-align: center;
+
+    @include mq(m) {
+      margin-bottom: 55px;
+    }
 
     @include mq(s) {
-      backdrop-filter: blur(4px);
+      margin-bottom: 45px;
+    }
+
+    .titulo {
+      margin-bottom: 20px;
+      color: $marfim;
+    }
+
+    p {
+      max-width: 580px;
+      margin: 0 auto;
+      color: rgba($marfim, 0.8);
+      font-size: 15px;
+      line-height: 1.8;
+
+      @include mq(s) {
+        font-size: 14px;
+      }
     }
   }
 
-  .container {
-    position: relative;
-    z-index: 1;
+  .processo-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+    color: $ouro;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 25px;
+      height: 1px;
+      background-color: $ouro;
+    }
+
+    @include mq(s) {
+      font-size: 10px;
+      letter-spacing: 1.5px;
+    }
+  }
+
+  // BLOCOS
+  .processo-blocos {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 120px;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: stretch;
+    gap: 30px;
+    max-width: 1150px;
+    margin: 0 auto;
+
+    @include mq(m) {
+      grid-template-columns: 1fr 0.85fr;
+      gap: 20px;
+    }
 
     @include mq(s) {
       grid-template-columns: 1fr;
-      gap: 60px;
+      gap: 25px;
     }
   }
 
-  .titulo {
+  .processo-card {
+    position: relative;
+    padding: 45px;
+    border: 1px solid rgba($ouro, 0.45);
+    background-color: rgba($verde, 0.65);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 15px 40px rgba(#000, 0.12);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      width: 35px;
+      height: 35px;
+      border-top: 1px solid $ouro;
+      border-left: 1px solid $ouro;
+      opacity: 0.7;
+    }
+
+    @include mq(m) {
+      padding: 35px;
+    }
+
+    @include mq(s) {
+      padding: 35px 25px;
+    }
+  }
+
+  .processo-numero {
+    display: block;
+    margin-bottom: 28px;
+    color: rgba($ouro, 0.8);
+    font-family: $cormorant;
+    font-size: 42px;
+    line-height: 1;
+
+    @include mq(s) {
+      margin-bottom: 22px;
+      font-size: 36px;
+    }
+  }
+
+  .processo-label {
+    display: block;
+    margin-bottom: 12px;
+    color: $ouro;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .processo-card h3 {
+    margin: 0;
     color: $marfim;
+    font-family: $cormorant;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.1;
+
+    @include mq(m) {
+      font-size: 31px;
+    }
+
+    @include mq(s) {
+      font-size: 32px;
+    }
+  }
+
+  .processo-criacao h4 {
+    margin: 20px 0 25px;
+    color: $ouro;
+    font-family: $cormorant;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 500;
+
+    @include mq(s) {
+      font-size: 22px;
+    }
+  }
+
+  .processo-texto {
+    display: grid;
+    gap: 18px;
+
+    p {
+      margin: 0;
+      color: rgba($marfim, 0.88);
+      font-family: "Lato", sans-serif;
+      font-size: 14px;
+      line-height: 1.9;
+
+      @include mq(m) {
+        font-size: 13px;
+      }
+
+      @include mq(s) {
+        font-size: 14px;
+        line-height: 1.85;
+      }
+    }
+  }
+
+  // PRAZO
+  .processo-prazo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .processo-prazo-destaque {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      margin: 30px 0;
+
+      @include mq(s) {
+        margin: 25px 0;
+      }
+
+      span {
+        color: rgba($marfim, 0.7);
+        font-size: 12px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      strong {
+        color: $ouro;
+        font-family: $cormorant;
+        font-size: 48px;
+        font-weight: 500;
+        line-height: 1;
+
+        @include mq(m) {
+          font-size: 42px;
+        }
+
+        @include mq(s) {
+          font-size: 44px;
+        }
+      }
+    }
+
+    .btn {
+      margin-top: auto;
+      align-self: flex-start;
+
+      @include mq(s) {
+        margin-top: 30px;
+      }
+    }
   }
 }

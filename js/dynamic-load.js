@@ -22,6 +22,7 @@ async function initPage() {
     carregarSecao("gallery", "gallery.tpl"),
     carregarSecao("process", "process.tpl"),
     carregarSecao("contact", "contact.tpl"),
+    carregarSecao("book", "book.tpl"),
     carregarSecao("footer", "footer.tpl"),
   ]);
 

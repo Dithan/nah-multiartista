@@ -3,7 +3,11 @@
   <div class="container">
     <div class="hero-grid-left">
       <span class="detail-hero">Náh.</span>
-      <p class="hero-subtitulo">Náh Multiartista</p>
+      <p class="hero-subtitulo subtitulo">
+        <span></span>
+        Náh Multiartista
+        <span class="show-mobile"></span>
+      </p>
 
       <h1 class="hero-titulo">
         O invisível encontra caminhos para se manifestar no visível.

@@ -28,7 +28,7 @@ $largura_smartphone: 425px;
 }
 
 .show-mobile {
-  display: none;
+  display: none !important;
 
   @include mq(s) {
     display: block !important;

@@ -61,18 +61,9 @@
   }
 
   .hero-subtitulo {
-    font-family: $cormorant;
-    font-size: 24px;
-    font-weight: 700;
-    color: verde;
-
-    @include mq(m) {
-      font-size: 22px;
-    }
-
     @include mq(s) {
-      font-size: 20px;
       text-align: center;
+      justify-content: center;
     }
   }
 

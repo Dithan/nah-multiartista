@@ -4,7 +4,8 @@
 
   <div class="container">
     <div class="sobre-grid-left">
-      <div class="texto">
+      <div class="texto white">
+          <h3 class="subtitulo white right">Me Conheça! <span></span></h3>
           <h2 id="sobre-titulo" class="titulo verde">Sobre mim</h2>
           <p>
             Sou Natália Cristina, a <span class="marca">Náh</span>, nome que
@@ -39,7 +40,9 @@
     </div>
 
     <div class="sobre-grid-right">
-      <div class="texto">
+      <div class="texto white">
+          <h3 class="subtitulo white"><span></span>Conheça minha arte!</h3>
+
           <h2 class="titulo verde">Sobre meu trabalho</h3>
 
           <p>

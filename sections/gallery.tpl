@@ -1,51 +1,78 @@
 <section id="galeria" class="galeria" aria-labelledby="galeria-titulo">
-  <span class="line"><img src="./assets/img/linha.svg" /></span>
+  <span class="line">
+    <img src="./assets/img/linha.svg" alt="" />
+  </span>
+
   <div class="container">
-    <h2 id="galeria-titulo" class="titulo">Meu universo artístico</h2>
+    <div class="galeria-header">
+      <span class="galeria-eyebrow">Entre cores, formas e sentimentos</span>
 
-    <div class="texto">
-      <p>
-        Cada obra carrega uma expressão, uma intenção e uma forma única de
-        traduzir aquilo que atravessa meu universo criativo.
-      </p>
+      <h2 id="galeria-titulo" class="titulo">Meu universo artístico</h2>
 
-      <p>Explore minhas pinturas, ilustrações e criações artísticas.</p>
+      <div class="texto">
+        <p>
+          Cada obra carrega uma expressão, uma intenção e uma forma única de
+          traduzir aquilo que atravessa meu universo criativo.
+        </p>
+
+        <p>Explore minhas pinturas, ilustrações e criações artísticas.</p>
+      </div>
     </div>
 
     <div class="grid-galeria">
-      <div class="quadro">
+      <article class="quadro">
         <figure>
           <img
             src="./assets/img/galeria/acestrais.jpeg"
-            alt="Quadros de pintura Ancestrais"
+            alt="Obra de pintura Ancestrais"
+            loading="lazy"
           />
+          <span class="quadro-numero">01</span>
         </figure>
-        <figcaption>Ancestrais</figcaption>
-      </div>
 
-      <div class="quadro">
+        <figcaption>
+          <span class="quadro-titulo">Ancestrais</span>
+          <span class="quadro-legenda">Raízes e pertencimento</span>
+        </figcaption>
+      </article>
+
+      <article class="quadro">
         <figure>
           <img
             src="./assets/img/galeria/duo.jpeg"
-            alt="Quadros de pintura Duo"
+            alt="Obra de pintura Duo"
+            loading="lazy"
           />
+          <span class="quadro-numero">02</span>
         </figure>
-        <figcaption>Duo</figcaption>
-      </div>
 
-      <div class="quadro">
+        <figcaption>
+          <span class="quadro-titulo">Duo</span>
+          <span class="quadro-legenda">Encontros e conexões</span>
+        </figcaption>
+      </article>
+
+      <article class="quadro">
         <figure>
           <img
             src="./assets/img/galeria/expressoes-do-brasil.jpeg"
-            alt="Quadros de pintura Expressoes do Brasil"
+            alt="Obra de pintura Expressões do Brasil"
+            loading="lazy"
           />
+          <span class="quadro-numero">03</span>
         </figure>
-        <figcaption>Expressões do Brasil</figcaption>
-      </div>
+
+        <figcaption>
+          <span class="quadro-titulo">Expressões do Brasil</span>
+          <span class="quadro-legenda">Identidade e diversidade</span>
+        </figcaption>
+      </article>
     </div>
 
     <div class="btn-container">
-      <a href="#contato" class="btn btn-primary">Quero encomendar uma obra!</a>
+      <a href="#contato" class="btn btn-primary">
+        Quero encomendar uma obra!
+      </a>
     </div>
   </div>
 </section>

@@ -15,11 +15,19 @@ h4,
 }
 
 .titulo {
-  font-size: 38px;
+  margin: 0;
+  color: colors.$bordo;
+  font-family: $cormorant;
+  font-size: clamp(42px, 5vw, 52px);
+  font-weight: 500;
+  line-height: 0.98;
   margin-bottom: 20px;
 
-  @include mq(s) {
-    font-size: 32px;
+  span {
+    display: block;
+    margin-top: 8px;
+    color: colors.$terracota;
+    font-style: italic;
   }
 
   &.verde {
@@ -27,9 +35,63 @@ h4,
   }
 }
 
+.subtitulo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  color: colors.$bordo;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  span {
+    display: block;
+    width: 32px;
+    height: 1px;
+    background-color: colors.$bordo;
+  }
+
+  &.white {
+    color: colors.$ouro;
+
+    span {
+      background-color: colors.$ouro;
+    }
+  }
+
+  &.right {
+    text-align: right;
+
+    @include mq(l) {
+      justify-content: right;
+    }
+
+    @include mq(s) {
+      flex-direction: row-reverse;
+      justify-content: left;
+    }
+  }
+}
+
+.undertitle {
+  margin-top: 24px;
+  color: colors.$verde;
+  font-family: $cormorant;
+  font-size: 25px;
+  font-style: italic;
+  font-weight: 400;
+
+  &.ouro {
+    color: colors.$ouro;
+  }
+}
+
 .texto {
   font-family: "Lato", sans-serif;
   font-style: normal;
+  color: #222;
 
   @include mq(l) {
     text-align: justify;
@@ -39,8 +101,29 @@ h4,
     font-size: 16px;
     margin-bottom: 10px;
 
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    line-height: 1.9;
+
     @include mq(s) {
       font-size: 16px;
+    }
+  }
+
+  em,
+  strong,
+  b {
+    color: colors.$bordo;
+    font-weight: 700;
+  }
+
+  &.white {
+    color: colors.$marfim;
+
+    em,
+    strong,
+    b {
+      color: #fff;
     }
   }
 }
