@@ -69,7 +69,7 @@
       </article>
     </div>
 
-    <div class="btn-container">
+    <div class="btn-container center">
       <a href="#contato" class="btn btn-primary">
         Quero encomendar uma obra!
       </a>
