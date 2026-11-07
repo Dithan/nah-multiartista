@@ -1582,7 +1582,7 @@ header.is-dark .menu-toggle:hover {
 }
 @media screen and (max-width: 767px) {
   .go-to-top {
-    bottom: 80px;
+    bottom: 75px;
     width: 44px;
     height: 44px;
   }
