@@ -1,7 +1,7 @@
 <section id="contato" class="contato" aria-labelledby="contato-titulo">
   <span class="mascara"></span>
   <div class="container">
-    <div>
+    <div data-aos="zoom-in">
       <h2 id="contato-titulo" class="titulo">Encomende sua obra</h2>
 
       <div class="texto">
@@ -19,7 +19,7 @@
 
     <span class="separador"></span>
 
-    <div>
+    <div data-aos="zoom-in">
       <h2 class="titulo">Vamos criar essa conexão?</h2>
 
       <div class="texto">
@@ -30,7 +30,7 @@
         </p>
       </div>
 
-      <div class="btn-container">
+      <div class="btn-container" data-aos="fade-up">
         <a
           href="https://wa.me/5511995906904"
           target="_blank"

@@ -1,6 +1,6 @@
 <section class="book" id="livro" aria-labelledby="livro-titulo">
   <div class="book-container container">
-    <div class="book-image hide-mobile">
+    <div class="book-image hide-mobile" data-aos="flip-right" data-aos-delay="300">
       <picture class="book-image-frame">
         <img
           src="./assets/img/book.jpeg"
@@ -20,7 +20,7 @@
       </span>
     </div>
 
-    <div class="book-content">
+    <div class="book-content" data-aos="fade-up">
       <span class="book-eyebrow">
         <span></span>
         Literatura infantil
@@ -41,7 +41,7 @@
       </div>
 
       <div class="book-image show-mobile">
-        <picture class="book-image-frame">
+        <picture class="book-image-frame" data-aos="flip-right">
           <img
             src="./assets/img/book.jpeg"
             alt="Capa do livro A Menina e a Amiga Musikáh"

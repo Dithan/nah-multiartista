@@ -33,3 +33,127 @@
     text-align: left;
   }
 }
+
+.go-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 90px;
+  z-index: 98;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  border: 1px solid rgba($ouro, 0.6);
+  border-radius: 50%;
+  background-color: $bordo;
+  color: $marfim;
+
+  box-shadow: 0 5px 20px rgba(#000, 0.2);
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  &:hover {
+    background-color: lighten($bordo, 8%);
+    border-color: $ouro;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(#000, 0.25);
+  }
+
+  svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  @include mq(s) {
+    bottom: 80px;
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  border: 1px solid rgba($ouro, 0.6);
+  border-radius: 50px;
+  background: $verde;
+  color: $marfim;
+  box-shadow: 0 5px 20px rgba(#000, 0.2);
+  cursor: pointer;
+  animation: whatsapp-pulse 2.5s ease-in-out infinite;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+
+  @include mq(s) {
+    background: rgba($verde, 0.9);
+    padding: 8px 16px;
+    gap: 10px;
+
+    span {
+      font-size: 14px;
+    }
+  }
+
+  &:hover {
+    background-color: lighten($verde, 7%);
+    border-color: $ouro;
+    box-shadow: 0 8px 25px rgba(#000, 0.25);
+    transform: translateY(-3px);
+    animation-play-state: paused;
+  }
+
+  &:active {
+    transform: translateY(0) scale(0.97);
+  }
+
+  svg {
+    display: block;
+    width: 21px;
+    height: 21px;
+    color: $marfim;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover svg {
+    transform: rotate(-8deg);
+  }
+
+  span {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+  }
+}
+
+@keyframes whatsapp-pulse {
+  0%,
+  100% {
+    box-shadow: 0 5px 20px rgba(#000, 0.2);
+  }
+
+  50% {
+    box-shadow:
+      0 5px 20px rgba(#000, 0.2),
+      0 0 0 5px rgba($ouro, 0.12);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-float {
+    animation: none;
+    transition: none;
+  }
+}

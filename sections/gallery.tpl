@@ -4,7 +4,7 @@
   </span>
 
   <div class="container">
-    <div class="galeria-header">
+    <div class="galeria-header" data-aos="fade-up">
       <span class="galeria-eyebrow">Entre cores, formas e sentimentos</span>
 
       <h2 id="galeria-titulo" class="titulo">Meu universo artístico</h2>
@@ -20,7 +20,7 @@
     </div>
 
     <div class="grid-galeria">
-      <article class="quadro">
+      <article class="quadro" data-aos="flip-left">
         <figure>
           <img
             src="./assets/img/galeria/acestrais.jpeg"
@@ -36,7 +36,7 @@
         </figcaption>
       </article>
 
-      <article class="quadro">
+      <article class="quadro" data-aos="flip-right" data-aos-delay="200">
         <figure>
           <img
             src="./assets/img/galeria/duo.jpeg"
@@ -52,7 +52,7 @@
         </figcaption>
       </article>
 
-      <article class="quadro">
+      <article class="quadro" data-aos="flip-left">
         <figure>
           <img
             src="./assets/img/galeria/expressoes-do-brasil.jpeg"
@@ -69,7 +69,7 @@
       </article>
     </div>
 
-    <div class="btn-container center">
+    <div class="btn-container center" data-aos="fade-up">
       <a href="#contato" class="btn btn-primary">
         Quero encomendar uma obra!
       </a>

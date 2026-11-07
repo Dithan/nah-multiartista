@@ -368,81 +368,23 @@ section {
     scroll-behavior: auto;
   }
 }
-[data-aos] {
+.js-scroll [data-animate] {
   opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.js-scroll [data-animate].is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.fade-up {
-  animation: fade-up 0.5s ease-out both;
-}
-
-@keyframes fade-up {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
+@media (prefers-reduced-motion: reduce) {
+  .js-scroll [data-animate] {
     opacity: 1;
-    transform: translateY(0);
+    transform: none;
+    transition: none;
   }
 }
-@keyframes fade-down {
-  from {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.fade-down {
-  animation: fade-down 0.5s ease-out both;
-}
-
-@keyframes fade-left {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-.fade-left {
-  animation: fade-left 0.5s ease-out both;
-}
-
-@keyframes fade-right {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-.fade-right {
-  animation: fade-right 0.5s ease-out both;
-}
-
-@keyframes zoom-in {
-  from {
-    opacity: 0;
-    transform: scale(0.6);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-.zoom-in {
-  animation: zoom-in 0.5s ease-out both;
-  transform-origin: center center;
-}
-
 .btn {
   display: inline-flex;
   align-items: center;
@@ -1610,6 +1552,110 @@ header.is-dark .menu-toggle:hover {
   text-align: left;
 }
 
+.go-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 90px;
+  z-index: 98;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(210, 170, 89, 0.6);
+  border-radius: 50%;
+  background-color: #702c3b;
+  color: #f4ebdd;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.go-to-top:hover {
+  background-color: rgb(141.2923076923, 55.5076923077, 74.4307692308);
+  border-color: #d2aa59;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+.go-to-top svg {
+  width: 21px;
+  height: 21px;
+}
+@media screen and (max-width: 767px) {
+  .go-to-top {
+    bottom: 80px;
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  border: 1px solid rgba(210, 170, 89, 0.6);
+  border-radius: 50px;
+  background: #263f45;
+  color: #f4ebdd;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  animation: whatsapp-pulse 2.5s ease-in-out infinite;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+@media screen and (max-width: 767px) {
+  .whatsapp-float {
+    background: rgba(38, 63, 69, 0.9);
+    padding: 8px 16px;
+    gap: 10px;
+  }
+  .whatsapp-float span {
+    font-size: 14px;
+  }
+}
+.whatsapp-float:hover {
+  background-color: rgb(50.6785046729, 84.0196261682, 92.0214953271);
+  border-color: #d2aa59;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  transform: translateY(-3px);
+  animation-play-state: paused;
+}
+.whatsapp-float:active {
+  transform: translateY(0) scale(0.97);
+}
+.whatsapp-float svg {
+  display: block;
+  width: 21px;
+  height: 21px;
+  color: #f4ebdd;
+  transition: transform 0.3s ease;
+}
+.whatsapp-float:hover svg {
+  transform: rotate(-8deg);
+}
+.whatsapp-float span {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+@keyframes whatsapp-pulse {
+  0%, 100% {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2), 0 0 0 5px rgba(210, 170, 89, 0.12);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-float {
+    animation: none;
+    transition: none;
+  }
+}
 .book {
   position: relative;
   background-color: #f4ebdd;

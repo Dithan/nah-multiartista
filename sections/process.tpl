@@ -5,7 +5,7 @@
   data-header-theme="dark"
 >
   <div class="container">
-    <div class="processo-header">
+    <div class="processo-header" data-aos="fade-up">
       <span class="processo-eyebrow">Do primeiro encontro à obra final</span>
 
       <h2 id="processo-titulo" class="titulo">
@@ -19,7 +19,7 @@
     </div>
 
     <div class="processo-blocos">
-      <article class="processo-card processo-criacao">
+      <article class="processo-card processo-criacao" data-aos="flip-left">
         <span class="processo-numero">01</span>
 
         <span class="processo-label">O nascimento de uma obra</span>
@@ -46,7 +46,7 @@
         </div>
       </article>
 
-      <article class="processo-card processo-prazo">
+      <article class="processo-card processo-prazo" data-aos="flip-right">
         <span class="processo-numero">02</span>
 
         <span class="processo-label">O tempo de criar</span>

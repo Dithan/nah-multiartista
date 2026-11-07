@@ -3,7 +3,7 @@
   <span class="texture-effect"></span>
 
   <div class="container">
-    <div class="sobre-grid-left">
+    <div class="sobre-grid-left" data-aos="fade-right" data-aos-delay="200">
       <div class="texto white">
           <h3 class="subtitulo white right">Me Conheça! <span></span></h3>
           <h2 id="sobre-titulo" class="titulo verde">Sobre mim</h2>
@@ -33,13 +33,13 @@
         </div>
     </div>
 
-    <div class="sobre-grid-center">
+    <div class="sobre-grid-center" data-aos="fade-up">
       <picture>
         <img src="./assets/img/sobre.jpeg" alt="" />
       </picture>
     </div>
 
-    <div class="sobre-grid-right">
+    <div class="sobre-grid-right" data-aos="fade-left" data-aos-delay="200">
       <div class="texto white">
           <h3 class="subtitulo white"><span></span>Conheça minha arte!</h3>
 

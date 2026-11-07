@@ -1,7 +1,7 @@
 <section id="inicio" aria-labelledby="hero-titulo" class="hero">
   <span class="texture-effect texture-hero"></span>
   <div class="container">
-    <div class="hero-grid-left">
+    <div class="hero-grid-left" data-aos="fade-right" data-aos-delay="300">
       <span class="detail-hero">Náh.</span>
       <p class="hero-subtitulo subtitulo">
         <span></span>
@@ -36,7 +36,11 @@
     </div>
 
     <!-- Image -->
-    <div class="hero-grid-right hide-mobile">
+    <div
+      class="hero-grid-right hide-mobile"
+      data-aos="fade-up"
+      data-aos-delay="600"
+    >
       <picture class="hero-img">
         <span class="circulo"><img src="./assets/img/circulo.svg" /></span>
         <span class="circulo-s"
